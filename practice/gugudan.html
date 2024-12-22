@@ -1,0 +1,32 @@
+<script>
+  // 구구단을 계산하고 결과를 표시하는 함수
+  function gugudan() {
+    // 입력 필드에서 값을 가져옴
+    var value = document.getElementById("value").value;
+    // 결과를 저장할 빈 문자열 초기화
+    var result = "";
+
+    // 구구단 연산
+    for(i=1; i<=9; i++) {
+      // 현재 숫자에 대한 구구단 계산 및 결과 문자열에 추가
+      result += value + " x " + i + " = " + value*i + "\n";
+    }
+
+    // 계산된 결과를 HTML의 result 요소에 표시
+    document.getElementById("result").innerText = result;
+  }
+</script>
+
+<!-- 사용자 입력을 위한 텍스트 필드 -->
+<input type="text" id="value">
+<!-- 구구단 계산을 실행하는 버튼 -->
+<input type="button" onclick="gugudan()" value="EXEC">
+<!-- 구분선 -->
+<hr>
+<!-- 결과를 표시할 div 요소 -->
+<div id="result"></div>
+
+<!--작동 순서는-->
+<!--result 변수에 빈 문자열("")로 초기화-->
+<!--for문이 1~9까지 반복하면서 result 문자열에 계산 결과를 누적-->
+<!--반복이 완료된 후 최종적으로 만들어진 전체 문자열을 div에 한 번에 표시-->

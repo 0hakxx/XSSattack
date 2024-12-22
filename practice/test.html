@@ -1,0 +1,18 @@
+<script>
+    function js_test(){
+        alert('Method 호출됨 XSS');
+    }
+
+
+</script>
+
+
+<!--1)외부 파일을 이용하여 js 실행-->
+<script src="test.js"></script>
+
+<!--2)이벤트 핸들러를 사용하여 함수 호출-->
+<input type="button" onclick="js_test()" value="Click Me">
+
+<!--3)URL 을 이용하여 함수 호출-->
+<a href="javascript:js_test()">link Click me</a>
+
