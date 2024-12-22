@@ -35,19 +35,6 @@
         /* 페이지 전체에 'Nanum Gothic' 폰트를 적용합니다 */
         body { font-family: 'Nanum Gothic', sans-serif; }
     </style>
-  </head>
-  <body>
-    <div class="container">
-        <div class="page-header">
-            <h1>CREHACKTIVE Search Engine <small>Example 2 : Reflected XSS</small></h1>
-        </div>
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
-                <form method="GET">
-                    <div class="input-group">
-                        <input type="text" class="form-control" name="keyword" placeholder="Search for...">
-                        <span class="input-group-btn">
 </head>
 <body>
 <div class="container">
@@ -64,21 +51,6 @@
                     <span class="input-group-btn">
                         <button class="btn btn-primary" type="submit">Search</button>
                         </span>
-                    </div>
-                </form>
-                <br>
-                <?=$result1?>
-                <hr>
-                <?=$result2?>
-            </div>
-            <div class="col-md-2"></div>
-        </div>
-    </div>
-    <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
-    <script src="./js/bootstrap.min.js"></script>
-  </body>
                 </div>
             </form>
             <br>
