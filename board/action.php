@@ -32,6 +32,8 @@ if($mode == "write") {
         echo "<script>alert('빈칸이 존재합니다.');history.back(-1);</script>";
         exit();
     }
+    
+
 
     // 줄바꿈 문자를 HTML <br> 태그로 변환
     $content = str_replace("\\r\\n", "<br>", $content);
