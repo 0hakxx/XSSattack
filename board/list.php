@@ -79,7 +79,7 @@
         <div class="col-auto my-1">
           <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="search_type">
           <script>
-              function html_entity(str){
+              function html_entity(str){ // HTML 엔티티 대응방안
                 return String(str).replace(/[*\w.]/gi,function (c){
                  return '&#' + c.charCodeAt(0)+';';
                 });
@@ -87,6 +87,7 @@
               var types = ["all","title","writer","content"];
               var type = (new URLSearchParams(window.location.search)).get('search_type');
               if(type) {
+                  //type = html_entity(html) //HTML 엔티티 대응방안 적용
                   document.write('<option value="'+type+'" selected>'+type+'</option>');
               }
               for(var i=0;i<types.length;i++) {
