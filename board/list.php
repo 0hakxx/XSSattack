@@ -79,6 +79,11 @@
         <div class="col-auto my-1">
           <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="search_type">
           <script>
+              function html_entity(str){
+                return String(str).replace(/[*\w.]/gi,function (c){
+                 return '&#' + c.charCodeAt(0)+';';
+                });
+              }
               var types = ["all","title","writer","content"];
               var type = (new URLSearchParams(window.location.search)).get('search_type');
               if(type) {
